@@ -1,8 +1,6 @@
 # PICS
 help to make web_album
 
-## intro 
-
 ## main
 https://webalbumproject.github.io/PICS/main.html
 
