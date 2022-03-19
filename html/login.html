@@ -79,14 +79,16 @@
             padding: 8.5px 14.5px;
             margin-bottom: 15px;
         }
+
+        /*  */
         .circle{
             display: inline-block;
             width: 20px; height: 20px;
             border: 2px solid #7D75D8;
             box-sizing: border-box;
             border-radius: 7px; 
-            position: relative; top: 4px;
-            left: -20px;
+            position: relative; 
+            top: 4px; left: 0;
             cursor: pointer; 
         }
         .join-box .text {
@@ -94,7 +96,7 @@
             font-weight: 300;
             font-family: 'GmarketSans';
             position: relative;
-            top: 8px; left: -55px;
+            top: 6px; left: 10px;
         }
         .circle:after{
             content: '\2714';
@@ -107,6 +109,7 @@
         #chk:checked + .circle:after{ opacity: 1; }
 
         #chk{ position: absolute; left: -999em; }
+        
         .check {
             display: flex;
         }
@@ -118,7 +121,8 @@
         .remember {
             font-size: 15px;
             color: #7D75D8;
-            float: right;
+            /* float: right; */
+            margin-left: auto;
             margin-right: 30px;
         }
         .remember:hover {
@@ -149,6 +153,7 @@
         .loginBox_text .already a {
             color: rgb(125 117 216);
         }
+
         .loginBox_text .connect_signUp {
             display: flex;
             font-size: 8px;
@@ -199,15 +204,15 @@
                                     <input type="pass" id="youPass" name="youPass" placeholder="Password" autocomplete="off"  required>
                                 </div>
                                 <div class="check">
-                                <form action="#">
-                                    <label for="chk">
-                                        <input type="checkbox" id="chk">
-                                        <i class="circle"></i>
-                                    </label>
-                                </form>
-                                <span class="text">아이디저장</span>
-                                <div class="remember">Forgot password?</div>
-                            </div>
+                                    <form action="#">
+                                        <label for="chk">
+                                            <input type="checkbox" id="chk">
+                                            <i class="circle"></i>
+                                        </label>
+                                    </form>
+                                    <span class="text">아이디저장</span>
+                                    <div class="remember">Forgot password?</div>
+                                </div>
                             </div>
                             <button id="joinBtn" class="login-submit" type="submit">Login</button>
                         </fieldset>
