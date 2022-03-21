@@ -5,65 +5,91 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PICS 메인페이지</title>
-    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/font.css">
     <style>
-        .intro__wrap {
-            width: 100%;
-            height: 100vh; 
-        }
-        #intro .firstLetter {
-            font-family: 'IBM Plex Sans Condensed';
-            font-weight: 700;
-            font-size: 30vw;
-            white-space: nowrap;
-        }
-        #intro .dot {
-            width: 1.5vw;
-            height: 1.5vw;
-            border-radius: 50%;
-            opacity: 0.5;
+
+        #section1 {
+            background: url("assets/img/mainPageImg/background.jpg");
+            width: 1440px;
+            height: 795px;
         }
 
-        #intro .dot1 {
-            background-color: #cee8ff;
-            top: 90%;
+        .section1__Container {
+            display: flex;
+            height: 795px;
+            background-color: rgba(0, 0, 0, 0.3);
         }
-        #intro .dot2 {
-            background-color: #FFD2DF;
-            top: 80%;
+
+        .section1__Container .title {
+            color: #fff;
+            font-size: 50px;
+            font-weight: bold;
         }
-        #intro .dot3 {
-            background-color: #AA9739;
-            top: 70%;
+        
+        .textBox {
+            transform: translate(0, 35%);
         }
-        #intro .dot4 {
-            background-color: #4E9231;
-            top: 60%;
+        
+        .btnBox {
+            display: flex;
+            transform: translate(100px, 0);
+            margin-top: 30px;
         }
-        #intro .dot5 {
-            background-color: #e64809;
-            top: 12%;
+        
+        .imageBox {
+            width: 745px;
+            height: 480px;
+            background-color: #CCDEEE;
+            margin-right: 60px;
+            transform: translate(0, 30%);
+            border-radius: 10px;
+            position: relative;
         }
-        #intro .dot6 {
-            background-color: #0044ff;
-            top: 40%;
+        
+        .imageBox .img {
+            background: url("assets/img/mainPageImg/screenImage.jpg");
+            width: 735px;
+            height: 405px;
+            position: absolute;
+            bottom: 0;
         }
-        #intro .dot7 {
-            background-color: #C3E5AE;
-            top: 19%;
+
+        .textBox .StartNowBtn {
+            width: 108px;
+            height: 35px;
+            background-color: #11253E;
+            border: 1px solid #11253E;
+            border-radius: 50px;
+            text-align: center;
+            margin: 10px 10px;
         }
-        #intro .dot8 {
-            background-color: #F1E1A6;
-            top: 20%;
+
+        .textBox .StartNowBtn a {
+            color: #fff;
+            font-size: 15px;
+            text-decoration: none;
+            vertical-align: -5px;
         }
-        #intro .dot9 {
-            background-color: #F4BBBB;
-            top: 10%;
+
+        .textBox .ContactBtn {
+            width: 108px;
+            height: 35px;
+            text-align: center;
+            margin: 10px 10px;
         }
-        #intro .dot10 {
-            background-color: #fff;
-            top: 5%;
+
+        .textBox .ContactBtn a {
+            color: #fff;
+            font-size: 15px;
+            text-decoration: none;
+            vertical-align: -5px;
+        }
+
+        .textBox .ContactBtn a span {
+            color: #0A2540;
+            font-weight: bold;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -147,10 +173,40 @@
             ></div>
         </div>
     </div>
-    <main id="main"></main>
+
+    <main id="main">
+        <section id="section1" class="fixed"
+            data-2200 = "display: none; bottom: -100%;"
+            data-2201 = "display: block; bottom: -100%;"
+            data-2500 = "display: block; bottom: 50%;"
+        
+        >
+            <div class="section1__Container">
+                <div class="textBox">
+                    <div class="title">웹 앨범 만들때는<br>
+                        쉽고 안전한 피스에서</div>
+                    <div class="btnBox">
+                        <div class="StartNowBtn"><a href="#">Start now > </a></div>
+                        <div class="ContactBtn"><a href="#">Contact sales <span>></span></a></div>
+                    </div>
+                </div>
+    
+                <div class="imageBox">
+                    <div class="img"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    
     <footer id="footer"></footer>
 
 
+
+
+
+    
     <script type="text/javascript" src="assets/js/skrollr.min.js"></script>
     <script type="text/javascript">
         var s = skrollr.init();
