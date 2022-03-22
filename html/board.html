@@ -7,27 +7,29 @@
     <title>게시판</title>
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/font.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/yellowheader.css">
     <link rel="stylesheet" href="assets/css/join_login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+
+        body {
+            background-color: #654ea3;
+        }
+
+        #header {
+            color: #fef84a;
+        }
         #board .board__head {
             width: 100%;
             height: 250px;
-            background-color: #654ea3;
             color: #fef84a;
             text-align: center;
         }
         #board .board__head p {
             font-size: 100px;
             font-weight: bold;
-        }
-        #board .board__head span {
-            font-size: 50px;
-            font-weight: bold;
-            display: inline-block;
         }
 
         .board__body .container {
@@ -50,9 +52,18 @@
             white-space: nowrap;
         }
 
-        .board__body article:hover {}
-        .board__body .article1 {}
-        .board__body .article2 {}
+        .board__body .article0 {
+            text-align: right;
+            border: 0;
+        }
+        .board__body .article0 span {
+            display: inline-block;
+            font-size: 50px;
+            color: #fef84a;
+            font-weight: bold;
+            padding-top: 50px;
+            
+        }
 
     </style>
 </head>
@@ -80,11 +91,13 @@
             <div class="board__head">
                 <div class="container">
                     <p>Contact</p>
-                    <span>웹 앨범에 대한 궁금증을 풀어드립니다.</span>
                 </div>
             </div>
             <div class="board__body">
                 <div class="container">
+                    <article class="article0">
+                        <span>You might<br>be curius<br>about</span>
+                    </article>
                     <article class="article1">
                         <p>의뢰하기</p>
                     </article>
