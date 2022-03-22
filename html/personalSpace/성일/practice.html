@@ -7,12 +7,15 @@
     <title>의뢰하기</title>
     <link rel="stylesheet" href="../../assets/css/reset.css">
     <link rel="stylesheet" href="../../assets/css/font.css">
-    <link rel="stylesheet" href="../../assets/css/custom.css">
-    <link rel="stylesheet" href="../../assets/css/join_login.css">
+    <link rel="stylesheet" href="../../assets/css/newheader.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+
+        .container {
+            margin: 0 auto;
+        }
 
         #boardQuest {
             /* font-family */
@@ -26,31 +29,32 @@
         .boardQuest__body .desc {
             display: flex;
             justify-content: space-between;
+            width: 1200px;
+            margin: 0 auto;
             
         }
         .boardQuest__body article {
             width: 300px;
             height: 350px;
+            position: relative;
         }
-        .boardQuest__body .article1::after {
-            content: '';
-            width: 300px;
-            height: 350px;
-            background-color: rgba(0,0,0,0.5);
+        
+        .boardQuest__body article h4 {
             position: absolute;
-            left: 0;
-            bottom: 0;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
         }
 
         .boardQuest__body .article1 {
-            background-image: url(../../assets/img/quest/family.jpg);
+            background-image: linear-gradient( rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url(../../assets/img/quest/family.jpg);
             position: relative;
         }
         .boardQuest__body .article2 {
-            background-image: url(../../assets/img/quest/dog.jpg);
+            background-image: linear-gradient( rgba(255,255,255,0.3), rgba(255,255,255,0.3)),url(../../assets/img/quest/dog.jpg);
         }
         .boardQuest__body .article3 {
-            background-image: url(../../assets/img/quest/event.jpg);
+            background-image: linear-gradient( rgba(255,255,255,0.3), rgba(255,255,255,0.3)),url(../../assets/img/quest/event.jpg);
         }
         
         .boardQuest__body .process {
@@ -75,14 +79,19 @@
             display: flex;
             justify-content: space-evenly;
             margin-top: 40px;
+            width: 1200px;
+            margin: 0 auto;
         }
 
         .boardQuest__body .step {
             width: 300px;
             height: 300px;
-            border: 1px solid #000;
             border-radius: 50%;
             position: relative;
+            background-color: #ffffffcc;
+        }
+        .boardQuest__body .step p {
+            font-size: 20px;
         }
         .boardQuest__body .step1 img {
             position: absolute;
