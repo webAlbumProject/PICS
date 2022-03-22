@@ -1,5 +1,3 @@
-/* header */
-
 * {
     margin: 0;
     padding: 0;
@@ -35,7 +33,7 @@
     padding-top: 11px;
     text-align: left;
     margin-left: 20px;
-    color: #000;
+    color: rgb(107, 81, 204);
 }
 
 #header .middleMenu {
@@ -51,7 +49,7 @@
 #header .middleMenu li a {
     font-size: 20px;
     font-weight: 600;
-    color: rgb(0, 0, 0);
+    color: rgb(107, 81, 204);
 }
 
 #header .SignIn {
@@ -62,18 +60,15 @@
 #header .SignIn a {
     padding: 5px 20px;
     border-radius: 30px;
-    border: 1px solid rgb(0, 0, 0);
+    border: 2px solid rgb(174, 139, 219);
     background-color: rgba(255, 255, 255, 0.3);
     text-decoration: none;
     font-weight: 1000;
-    color: rgb(0, 0, 0);
+    color: rgb(129, 90, 202);
     text-align: right;
     float: right;
 }
 
-.white {
-    color: #fff;
-}
 
 /* 간격 셋팅 */
 .mt0 {margin-top: 0 !important;}
