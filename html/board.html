@@ -39,21 +39,33 @@
         }
 
         .board__body article {
-            border: 1px solid #000;
+            border: 1px solid #57448d;
             width: 300px;
             height: 400px;
             position: relative;
+            border-radius: 20px;
         }
         .board__body p {
-            font-size: 30px;
+            font-size: 50px;
+            font-weight: bold;
             position: absolute;
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
             white-space: nowrap;
+            color: #fef84a;
         }
-
+/* 
+        .board__body .article1:hover p,
+        .board__body .article2:hover p {
+            color: #654ea3;} */
+        .board__body .article2:hover,
+        .board__body .article1:hover {
+            transition: all 1s ease;
+            background-color: #32215f;
+            
+        }
         .board__body .article0 {
-            text-align: right;
+        text-align: right;
             border: 0;
         }
         .board__body .article0 span {
