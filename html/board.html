@@ -7,52 +7,77 @@
     <title>게시판</title>
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/font.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/yellowheader.css">
     <link rel="stylesheet" href="assets/css/join_login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        #board .board__head {
+
+        body {
+            background-color: #654ea3;
+        }
+
+        #header {
+            color: #fef84a;
+        }
+        #board .board__foot {
             width: 100%;
             height: 250px;
-            background-color: #654ea3;
             color: #fef84a;
             text-align: center;
+            margin-top: 200px;
         }
-        #board .board__head p {
+        #board .board__foot p {
             font-size: 100px;
             font-weight: bold;
-        }
-        #board .board__head span {
-            font-size: 50px;
-            font-weight: bold;
-            display: inline-block;
         }
 
         .board__body .container {
             display: flex;
             justify-content: space-evenly;
-            margin-top: 40px;
+            margin-top: 150px;
         }
 
-        .board__body article {
-            border: 1px solid #000;
+        .board__body .article1,
+        .board__body .article2 {
+            border: 1px solid #57448d;
             width: 300px;
             height: 400px;
             position: relative;
+            border-radius: 20px;
         }
         .board__body p {
-            font-size: 30px;
+            font-size: 50px;
+            font-weight: bold;
             position: absolute;
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
             white-space: nowrap;
+            color: #fef84a;
         }
-
-        .board__body article:hover {}
-        .board__body .article1 {}
-        .board__body .article2 {}
+/* 
+        .board__body .article1:hover p,
+        .board__body .article2:hover p {
+            color: #654ea3;} */
+        .board__body .article2:hover,
+        .board__body .article1:hover {
+            transition: all 1s ease;
+            background-color: #32215f;
+            
+        }
+        .board__body .article0 {
+        text-align: right;
+            border: 0;
+        }
+        .board__body .article0 span {
+            display: inline-block;
+            font-size: 50px;
+            color: #fef84a;
+            font-weight: bold;
+            padding-top: 50px;
+            
+        }
 
     </style>
 </head>
@@ -77,20 +102,22 @@
 
     <main id="main">
         <section id="board">
-            <div class="board__head">
-                <div class="container">
-                    <p>Contact</p>
-                    <span>웹 앨범에 대한 궁금증을 풀어드립니다.</span>
-                </div>
-            </div>
             <div class="board__body">
                 <div class="container">
-                    <article class="article1">
+                    <article class="article0">
+                        <span>You might<br>be curius<br>about</span>
+                    </article>
+                    <a href="#" class="article1">
                         <p>의뢰하기</p>
-                    </article>
-                    <article class="article2">
+                    </a>
+                    <a href="#" class="article2">
                         <p>문의하기</p>
-                    </article>
+                    </a>
+                </div>
+            </div>
+            <div class="board__foot">
+                <div class="container">
+                    <p>Contact Us</p>
                 </div>
             </div>
         </section>

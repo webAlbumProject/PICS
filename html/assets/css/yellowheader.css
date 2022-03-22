@@ -28,12 +28,12 @@
 }
 
 #header .headerLogo {
-    flex: 0 0 20%;
+    flex: 0 0 23%;
     font-size: 24px;
     padding-top: 11px;
     text-align: left;
     margin-left: 20px;
-    color: rgb(107, 81, 204);
+    color: #fef84a;
 }
 
 #header .middleMenu {
@@ -49,22 +49,22 @@
 #header .middleMenu li a {
     font-size: 20px;
     font-weight: 600;
-    color: rgb(107, 81, 204);
+    color: #fef84a;
 }
 
 #header .SignIn {
-    flex: 0 0 30%;
+    flex: 0 0 23%;
     margin: 15px 0;
 }
 
 #header .SignIn a {
     padding: 5px 20px;
     border-radius: 30px;
-    border: 2px solid rgb(174, 139, 219);
-    background-color: rgba(255, 255, 255, 0.3);
+    border: 2px solid #fef84a;
+    background-color: rgba(73, 0, 245, 0.3);
     text-decoration: none;
     font-weight: 1000;
-    color: rgb(129, 90, 202);
+    color: #fef84a;
     text-align: right;
     float: right;
 }
