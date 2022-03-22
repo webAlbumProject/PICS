@@ -28,7 +28,7 @@
 }
 
 #header .headerLogo {
-    flex: 0 0 23%;
+    flex: 0 0 20%;
     font-size: 24px;
     padding-top: 11px;
     text-align: left;
@@ -53,7 +53,7 @@
 }
 
 #header .SignIn {
-    flex: 0 0 23%;
+    flex: 0 0 30%;
     margin: 15px 0;
 }
 
