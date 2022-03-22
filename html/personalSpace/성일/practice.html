@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>의뢰하기</title>
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/font.css">
+    <link rel="stylesheet" href="../../assets/css/custom.css">
+    <link rel="stylesheet" href="../../assets/css/join_login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+
+        #boardQuest {
+            /* font-family */
+        }
+        .boardQuest__head h3 {
+            text-align: center;
+            font-size: 50px;
+        }
+
+        .boardQuest__body {}
+        .boardQuest__body .desc {
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        .boardQuest__body article {
+            width: 300px;
+            height: 350px;
+        }
+        .boardQuest__body .article1::after {
+            content: '';
+            width: 300px;
+            height: 350px;
+            background-color: rgba(0,0,0,0.5);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        .boardQuest__body .article1 {
+            background-image: url(../../assets/img/quest/family.jpg);
+            position: relative;
+        }
+        .boardQuest__body .article2 {
+            background-image: url(../../assets/img/quest/dog.jpg);
+        }
+        .boardQuest__body .article3 {
+            background-image: url(../../assets/img/quest/event.jpg);
+        }
+        
+        .boardQuest__body .process {
+            text-align: center;
+            margin-top: 200px;
+        }
+
+        .boardQuest__body .process h3 {
+            font-size: 50px;
+            display: inline-block;
+        }
+
+        .boardQuest__body span {
+            display: block;
+            background-color: #fff;
+            text-align: center;
+            padding: 50px;
+            font-size: 30px;
+        }
+
+        .boardQuest__body .steps {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 40px;
+        }
+
+        .boardQuest__body .step {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            position: relative;
+        }
+        .boardQuest__body .step1 img {
+            position: absolute;
+            top: 40%; left: 40%;
+            transform: scale(4);
+        }
+        .boardQuest__body .step1::after,
+        .boardQuest__body .step2::after {
+            content: '';
+            width: 43px; height: 74px;
+            background-image: url(../../assets/img/quest/Vector.svg);
+            position: absolute;
+            bottom: 125px; right: -60px;
+        }
+        .boardQuest__body .step4::after {
+            content: '';
+            width: 43px; height: 74px;
+            background-image: url(../../assets/img/quest/Vector.svg);
+            position: absolute;
+            bottom: 125px; right: -120px;
+        }
+        .boardQuest__body .step2 img {
+            position: absolute;
+            top: 40%; left: 40%;
+            transform: scale(4);
+        }
+        .boardQuest__body .step3 img {
+            position: absolute;
+            top: 42%; left: 42%;
+            transform: scale(4);
+        }
+        .boardQuest__body .step4 img {
+            position: absolute;
+            top: 42%; left: 44%;
+            transform: scale(4);
+        }
+        .boardQuest__body .step5 img {
+            position: absolute;
+            top: 43%; left: 42%;
+            transform: scale(4);
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <section class="header__wrap white">
+                <div class="headerLogo">PICS</div>
+                <div class="middleMenu">
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="SignIn">
+                    <a href="#">Sign in</a>
+                </div>
+            </section>
+        </div>
+    </header>
+
+    <main id="main">
+        <section id="boardQuest">
+            <div class="boardQuest__head">
+                <div class="container">
+                    <h3>개인소장, 다양한 행사에 맞는<br>웹 앨범이 필요하신가요?</h3>
+                </div>
+            </div>
+            <div class="boardQuest__body">
+                <div class="container mt50">
+                    <div class="desc">
+                        <article class="article1">
+                            <h4>가족들과 함께</h4>
+                        </article>
+                        <article class="article2">
+                            <h4>애완동물과 함께</h4>
+                        </article>
+                        <article class="article3">
+                            <h4>행사 취지에 맞게</h4>
+                        </article>
+                    </div>
+                    <div class="process">
+                        <h3>진행과정</h3>
+                        <div class="steps">
+                            <div class="step1 step">
+                                <img src="../../assets/img/quest/ask.svg" alt="의뢰하기">
+                                <p>의뢰하기</p>
+                            </div>
+                            <div class="step2 step">
+                                <img src="../../assets/img/quest/cart.svg" alt="확인 및 결제">
+                                <p>확인 및 결제</p>
+                            </div>
+                            <div class="step3 step">
+                                <img src="../../assets/img/quest/picture.svg" alt="사진 전송">
+                                <p>사진 전송</p>
+                            </div>
+                        </div>
+                        <div class="steps">
+                            <div class="step4 step">
+                                <img src="../../assets/img/quest/confirm.svg" alt="확인 및 수정">
+                                <p>확인 및 수정</p>
+                            </div>
+                            <div class="step5 step">
+                                <img src="../../assets/img/quest/present.svg" alt="웹 앨범 완성">
+                                <p>웹 앨범 완성</p>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="mt50">이제, PICS 웹 앨범으로 한번에 해결하세요!</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+</body>
+</html>
