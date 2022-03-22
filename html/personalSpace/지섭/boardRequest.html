@@ -14,40 +14,82 @@
 
     <style>
         * {
-            margin: 0;
             padding: 0;
         }
 
         #board__wrap {
             width: 1400px;
+            margin: 0 auto;
         }
 
         #board__wrap h2 {
+            margin-top: 100px;
+            font-size: 50px;
             text-align: center;
-            margin-bottom: 90px;
+
+        }
+
+        #board__wrap p {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .board__container {
+            overflow: hidden;
         }
 
         .search__container {
             float: right;
+            transform: translateY(50px);
         }
 
-        .searchOption {}
+        .input {
+            width: 200px;
+            height: 30px;
+            border: 1px solid #000;
+            border-radius: 10px;
+        }
+
+        .searchOption {
+            height: 30px;
+            border: 1px solid #000;
+            border-radius: 10px;
+        }
 
 
-        .searchBtn {}
+        .searchBtn {
+            width: 50px;
+            height: 30px;
+            padding-bottom: 4px;
+            border: 1px solid #000;
+            border-radius: 10px;
+            background-color: rgb(255, 255, 255);
+        }
 
-        .WriteBtn {}
+        .WriteBtn {
+            font-size: 13px;
+            padding: 4px 4px 10px 4px;
+            border: 1px solid #000;
+            border-radius: 10px;
+        }
 
         .boardTable {
             width: 100%;
+            margin-top: 60px;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        .boardTable thead {}
+        .boardTable table {
+            border-top: 1px solid #000;
+            border-bottom:  1px solid #000;
+        }
 
-        .boardTable tr th {}
+        .boardTable tr th {
+            border-top: 1px solid #000;
+            border-bottom:  1px solid #000;
+        }
 
         .boardTable tr td {}
     </style>
@@ -77,10 +119,10 @@
                 <table>
                     <colgroup>
                         <col style="width: 5%;">
-                        <col style="width: 40%;">
-                        <col style="width: 20%;">
-                        <col style="width: 20%;">
-                        <col style="width: 20%;">
+                        <col style="width: 30%;">
+                        <col style="width: 7%;">
+                        <col style="width: 5%;">
+                        <col style="width: 5%;">
                     </colgroup>
 
                     <thead>
