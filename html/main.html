@@ -7,95 +7,59 @@
     <title>PICS 메인페이지</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/font.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;1000&display=swap" rel="stylesheet">
     <style>
-
-        #section1 {
-            background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("assets/img/mainPageImg/background.jpg");
+        #header {
+            top: 5%;
+            z-index: 1001;
             width: 100%;
-            height: 100vh;
-            background-repeat: no-repeat;
-            background-size: cover;
+            background-color: palegoldenrod;
+            font-family: 'Poppins';
         }
-
-        .section1__Container {
+        #header .header__wrap {
+            color: #fff;
+            font-size: 2vw;
             display: flex;
-            text-align: center;
-            margin-top: 30vh;
-            
-        }
-
-        .section1__Container .title {
-            text-align: right;
-            color: #fff;
-            font-size: 4vw;
+            justify-content: space-between;
             font-weight: bold;
-            white-space: nowrap;
         }
-        
-        .textBox {
+        #header .headerLogo {
+            flex: 0 0 25%;
+            text-align: center;
         }
-        
-        .btnBox {
+        #header .middleMenu {
+            flex: 0 0 45%;
+        }
+        #header .middleMenu ul {
             display: flex;
+            justify-content: space-between;
         }
-        
-        .imageBox {
-            width: 745px;
-            height: 480px;
-            background-color: #CCDEEE;
-            margin-right: 60px;
-            transform: translate(0, 30%);
-            border-radius: 10px;
-            position: relative;
-        }
-        
-        .imageBox .img {
-            background: url("assets/img/mainPageImg/screenImage.jpg");
-            width: 735px;
-            height: 405px;
-            position: absolute;
-            bottom: 0;
-        }
-
-        .textBox .StartNowBtn {
-            width: 108px;
-            height: 35px;
-            background-color: #11253E;
-            border: 1px solid #11253E;
-            border-radius: 50px;
+        #header .middleMenu li {}
+        #header .middleMenu li a {}
+        #header .SignIn {
+            flex: 0 0 35%;
             text-align: center;
-            margin: 10px 10px;
-        }
-
-        .textBox .StartNowBtn a {
-            color: #fff;
-            font-size: 15px;
-            text-decoration: none;
-            vertical-align: -5px;
-        }
-
-        .textBox .ContactBtn {
-            width: 108px;
-            height: 35px;
-            text-align: center;
-            margin: 10px 10px;
-        }
-
-        .textBox .ContactBtn a {
-            color: #fff;
-            font-size: 15px;
-            text-decoration: none;
-            vertical-align: -5px;
-        }
-
-        .textBox .ContactBtn a span {
-            color: #0A2540;
-            font-weight: bold;
-            text-decoration: none;
         }
     </style>
 </head>
 <body>
+    <header id="header" class="fixed">
+        <section class="header__wrap">
+            <div class="headerLogo">PICS</div>
+            <div class="middleMenu">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="SignIn">
+                <a href="#">Sign in</a>
+            </div>
+        </section>
+    </header>
+
     <div class="scrollTop">0</div>
     <div id="intro"
     data-0 = "display: block;"
@@ -176,23 +140,27 @@
         </div>
     </div>
 
+
+
     <main id="main">
         <section id="section1" class="fixed"
-            data-2200 = "display: none; opacity: 0;"
-            data-2201 = "display: block; opacity: 0;"
-            data-2500 = "display: block; opacity: 1;"
+            data-2200 = "display: none; opacity: 0; top: 50%;"
+            data-2201 = "display: block; opacity: 0; top: 50%;"
+            data-2500 = "display: block; opacity: 1; top: 50%;"
+            data-4500 = "display: block; opacity: 1; top: 50%;"
+            data-5500 = "display: block; opacity: 0.5; top: -50%;"
+            data-5501 = "display: none; opacity: 0.5; top: -50%;"
         >
             <div class="section1__Container">
                 <div class="textBox">
                     <div class="title">웹 앨범 만들때는<br>쉽고 안전한<br> PICS에서</div>
-                    <div class="btnBox">
-                        <div class="StartNowBtn"><a href="#">Start now > </a></div>
-                        <div class="ContactBtn"><a href="#">Contact sales <span>></span></a></div>
-                    </div>
+                    <a href="#c" class="textbox_btn">contact us</a>
                 </div>
-    
                 <div class="imageBox">
-                    <div class="img"></div>
+                    <img src="assets/img/mainPageImg/앨범느낌내기.jpg" alt="앨범느낌내기"
+                    data-2500 = "transform: translate(-50%, -50%) scale(1.8);"
+                    data-4500 = "transform: translate(-50%, -50%) scale(0.375);"
+                    >
                 </div>
             </div>
         </section>
