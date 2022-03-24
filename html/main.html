@@ -10,41 +10,19 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;1000&display=swap" rel="stylesheet">
     <style>
-        #header {
-            top: 5%;
-            z-index: 1001;
+        #section2 {
+            background-color: blue;    
             width: 100%;
-            background-color: palegoldenrod;
-            font-family: 'Poppins';
-        }
-        #header .header__wrap {
-            color: #fff;
-            font-size: 2vw;
-            display: flex;
-            justify-content: space-between;
-            font-weight: bold;
-        }
-        #header .headerLogo {
-            flex: 0 0 25%;
-            text-align: center;
-        }
-        #header .middleMenu {
-            flex: 0 0 45%;
-        }
-        #header .middleMenu ul {
-            display: flex;
-            justify-content: space-between;
-        }
-        #header .middleMenu li {}
-        #header .middleMenu li a {}
-        #header .SignIn {
-            flex: 0 0 35%;
-            text-align: center;
+            height: 100vh;
         }
     </style>
 </head>
 <body>
-    <header id="header" class="fixed">
+    <!-- <header id="header" class="fixed"
+        data-2200 = "display: none; opacity: 0;"
+        data-2201 = "display: block; opacity: 0;"
+        data-2500 = "display: block; opacity: 1;"
+    >
         <section class="header__wrap">
             <div class="headerLogo">PICS</div>
             <div class="middleMenu">
@@ -58,7 +36,7 @@
                 <a href="#">Sign in</a>
             </div>
         </section>
-    </header>
+    </header> -->
 
     <div class="scrollTop">0</div>
     <div id="intro"
@@ -163,6 +141,14 @@
                     >
                 </div>
             </div>
+        </section>
+
+        <section id="section2" class="fixed"
+        data-4499 = "display: none; opacity: 0; top: 150%;"
+        data-4500 = "display: block; opacity: 1; top: 150%;"
+        data-5600 = "display: block; opacity: 1; top: 50%;"
+        >
+
         </section>
     </main>
 
