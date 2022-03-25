@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상</title>
+    <style>
+        #section2 {}
+        .section2__head {
+            text-align: center;
+        }
+        .section2__head h2 {
+            color: gray;
+            font-size: 5vw;
+            font-weight: lighter;
+        }
+        .section2__head h2 span {
+            color: #000;
+            font-weight: normal;
+        }
+        .section2__head p {
+            color: gray;
+            font-weight: lighter;
+            font-size: 2vw;
+            margin-bottom: 10vh;
+        }
+        .section2__head .line {
+            width: 60vw;
+            height: 0.3vh;
+            background-color: lightgray;
+            display: inline-block;
+            text-align: center;
+            position: relative;
+        }
+        .section2__head .line .circle {
+            display: inline-block;
+            width: 15vh;
+            height: 15vh;
+            border-radius: 50%;
+            background: #A5BDFB;
+            position: absolute;
+            right: -14vh; bottom: -5vh;
+            opacity: 0.8;
+        }
+
+        .section2__body {
+            display: flex;
+        }
+
+        .section2__body .desc {}
+
+        .section2__body .desc .mouseDrag {
+            font-size: 8vh;
+            margin-left: 10vh;
+            text-align: center;
+            width: 35vh;
+            height: 35vh;
+            border-radius: 50%;
+            background-color: #A5BDFB;
+            color: #fff;
+            line-height: 35vh;
+            margin-right: 5vh;
+
+        }
+        .section2__body .photos {
+            margin-top: 10vh;
+            white-space: nowrap;
+            overflow: hidden;
+            border: 1px solid #000;
+        }
+        .section2__body .photos .photo {
+            display: inline-block;
+            width: 30vh;
+            height: 35vh;
+            background-color: #000;
+            border-radius: 1vh;
+            margin-left: 3vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        }
+        .section2__body .photos .photo1 {
+            background-image: url(assets/img/mainPageImg/gal1.jpg);
+            
+        }
+        .section2__body .photos .photo2 {
+            background-image: url(assets/img/mainPageImg/gal2.jpg);
+        }
+        .section2__body .photos .photo3 {
+            background-image: url(assets/img/mainPageImg/gal3.jpg);
+        }
+        .section2__body .photos .photo4 {
+            background-image: url(assets/img/mainPageImg/gal4.jpg);
+        }
+
+    </style>
+</head>
+<body>
+    <section id="section2">
+        <div class="section2__head">
+            <h2>Photo <span>Gallery</span></h2>
+            <p>이미지를 업로드 하게 되면 옆으로 넘겨보면서<br>마음에 드는 이미지를 선택할 수 있습니다</p>
+            <span class="line"><span class="circle"></span></span>
+        </div>
+        <div class="section2__body">
+            <article class="desc">
+                <p class="mouseDrag">Drag!</p>
+            </article>
+            <article class="photos">
+                <div class="photo1 photo"></div>
+                <div class="photo2 photo"></div>
+                <div class="photo3 photo"></div>
+                <div class="photo4 photo"></div>
+            </article>
+        </div>
+    </section>
+    
+</body>
+</html>
