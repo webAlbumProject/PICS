@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #section3 {
+            width: 100%;
+            height: 140vh;
+            background: #0057a1;
+        }
+
+        .section3__head {
+            display: inline-block;
+            text-align: left;
+            margin-top: 7.5vh;
+            margin-left: 7.5vh;
+            color: #fffde4;
+        }
+        #section3 h3 {
+            text-align: left;
+            font-size: 10vh;
+        }
+        
+        #section3 p {
+            text-align: left;
+            font-size: 4vh;
+        }
+        .section3__body {
+            /* background-color: #fff; */
+        }
+
+        .section3__body .layouts {
+            /* display: flex; */
+            /* border: 2px solid #000; */
+            overflow: hidden;
+            white-space: nowrap;
+            margin-top: 10vh;
+            
+        }
+        .section3__body .layouts .layout {
+            background-color: blue;
+            display: inline-block;
+            width: 80vh; height: 80vh;
+            border: 1px solid #000;
+            margin-right: 10vh;
+            margin-left: 10vh;
+        }
+
+    </style>
+</head>
+<body>
+    <section id="section3">
+        <div class="section3__head">
+            <h3>Layout</h3>
+            <p>원하는 레이아웃 스타일을 둘러보세요.</p>
+        </div>
+        <div class="section3__body">
+            <div class="layouts">
+                <article class="layout layout1"></article>
+                <article class="layout layout2"></article>
+                <article class="layout layout3"></article>
+                <article class="layout layout4"></article>
+                <article class="layout layout5"></article>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
