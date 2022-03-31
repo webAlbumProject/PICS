@@ -63,11 +63,21 @@
             margin-right: 5vh;
 
         }
+
+        .collection__photo {
+            position: relative;
+            border: 5px solid blue;
+            width: 100%;
+            overflow: hidden;
+        }
         .section2__body .photos {
             margin-top: 10vh;
             white-space: nowrap;
             overflow: hidden;
             border: 1px solid #000;
+            position: absolute;
+            left: 0;
+            top: 0;
         }
         .section2__body .photos .photo {
             display: inline-block;
@@ -82,7 +92,6 @@
         }
         .section2__body .photos .photo1 {
             background-image: url(assets/img/mainPageImg/gal1.jpg);
-            
         }
         .section2__body .photos .photo2 {
             background-image: url(assets/img/mainPageImg/gal2.jpg);
@@ -92,6 +101,30 @@
         }
         .section2__body .photos .photo4 {
             background-image: url(assets/img/mainPageImg/gal4.jpg);
+        }
+        .section2__body .photos .photo5 {
+            background-image: url(assets/img/mainPageImg/gal5.jpg);
+        }
+        .section2__body .photos .photo6 {
+            background-image: url(assets/img/mainPageImg/gal6.jpg);
+        }
+        .section2__body .photos .photo7 {
+            background-image: url(assets/img/mainPageImg/gal7.jpg);
+        }
+        .section2__body .photos .photo8 {
+            background-image: url(assets/img/mainPageImg/gal8.jpg);
+        }
+        .section2__body .photos .photo9 {
+            background-image: url(assets/img/mainPageImg/gal9.jpg);
+        }
+        .section2__body .photos .photo10 {
+            background-image: url(assets/img/mainPageImg/gal10.jpg);
+        }
+        .section2__body .photos .photo11 {
+            background-image: url(assets/img/mainPageImg/gal11.jpg);
+        }
+        .section2__body .photos .photo12 {
+            background-image: url(assets/img/mainPageImg/gal12.jpg);
         }
 
     </style>
@@ -107,14 +140,58 @@
             <article class="desc">
                 <p class="mouseDrag">Drag!</p>
             </article>
-            <article class="photos">
-                <div class="photo1 photo"></div>
-                <div class="photo2 photo"></div>
-                <div class="photo3 photo"></div>
-                <div class="photo4 photo"></div>
-            </article>
+            <div class="collection__photo">
+                <article class="photos">
+                    <div class="photo1 photo"></div>
+                    <div class="photo2 photo"></div>
+                    <div class="photo3 photo"></div>
+                    <div class="photo4 photo"></div>
+                    <div class="photo5 photo"></div>
+                    <div class="photo6 photo"></div>
+                    <div class="photo7 photo"></div>
+                    <div class="photo8 photo"></div>
+                    <div class="photo9 photo"></div>
+                    <div class="photo10 photo"></div>
+                    <div class="photo11 photo"></div>
+                    <div class="photo12 photo"></div>
+                </article>
+            </div>
         </div>
     </section>
     
+    <script>
+        const drag = document.querySelector(".collection__photo"); // 드래그 대상 요소
+        const drag2 = drag.querySelector(".photos"); // 드래그 대상 요소
+        
+
+        const initialMousePos = { x : 0}; // 드래그 시작 시점의 마우스 포인터 위치
+        const offset = {x : 0}; //이동할 거리
+        
+        //mousemove 이벤트 핸들러
+        const move = e => {
+            offset.x = e.clientX -initialMousePos.x;
+            
+            drag2.style.transform = `translate3D(${offset.x}px, 0, 0)`;
+        }
+
+        // mousedown 이벤트가 발생하면 드래그 시작 시점의 마우스 포인터 좌표를 저장한다
+        drag.addEventListener('mousedown', e => {
+            initialMousePos.x = e.clientX - offset.x;
+            //mousedown 이벤트가 발생할 상태에서 mousemove 이벤트가 발생하면 box 요소를 이동시킨다.
+            document.addEventListener('mousemove',move);
+        })
+
+        //mouseup 이벤트가 발생하면 Mousemove 이벤트를 제거해 이동을 멈춘다
+        document.addEventListener('mouseup', ()=> {
+            document.removeEventListener('mousemove', move);
+        });
+
+        // drag.forEach(a => {
+        //     a.addEventListener("mousedown", () => {
+        //         alert("123");
+        //     });
+        // });
+
+    </script>
 </body>
 </html>
