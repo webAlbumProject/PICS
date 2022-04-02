@@ -13,7 +13,7 @@
 
         #section3 {
             width: 100%;
-            height: 140vh;
+            height: 200vh;
             background: #69A5A4;
         }
 
@@ -34,34 +34,117 @@
             font-size: 4vh;
         }
         .section3__body {
-            /* background-color: #fff; */
-        }
-
-        .section3__body .layouts {
-            /* display: flex; */
-            /* border: 2px solid #000; */
-            overflow: hidden;
-            white-space: nowrap;
-            margin-top: 10vh;
-            
-        }
-        .section3__body .layouts .layout {
-            background-color: blue;
-            display: inline-block;
-            width: 80vh; height: 80vh;
-            /* border: 1px solid #000; */
-            margin-right: 10vh;
-            margin-left: 10vh;
+            margin-top: 5vh;
+            margin-left: 5vh;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
         }
         
-        .section3__body .layouts .layout1 {
-            background: url(assets/img/mainPageImg/album1.jpg);
-            background-size: cover;
+        .section3__body .left {
+            font-size: 8vh;
+            width: 25%;
         }
-        .section3__body .layouts .layout2 {
-            background: url(assets/img/mainPageImg/album2.jpg);
-            background-size: cover;
+        .section3__body .left h4 {
+            margin-bottom: 1.5vh;
+            margin-top: 1.5vh;
+            color: #fff;
+            font-weight: normal;
+            cursor: default;
+            /* border: 1px solid #000; */
+            text-align: center;
+            transition: all 0.5s ease;
         }
+        .section3__body .left h4.active {
+            color: #629594;
+            background-color: #fff;
+            transition: all 0.1s ease;
+        }
+        .section3__body .right {
+            margin-right: 10vh;
+            width: 50%;
+            height: 80vh;
+            position: absolute;
+            right: 0; bottom: 0;
+        }
+
+        .section3__body .album {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .section3__body .album article.show {
+            display: block;
+            transition: all 1s ease;
+            
+        }
+        .section3__body .album .layout1{
+            background-image: url(assets/img/mainPageImg/album1.jpg);
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            overflow: hidden;
+            display: none;
+            transition: all 1s ease;
+        }
+        .section3__body .album .layout2{
+            background-image: url(assets/img/mainPageImg/album2.jpg);
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            overflow: hidden;
+            display: none;
+        }
+        .section3__body .album .layout3{
+            background-image: url(assets/img/mainPageImg/album5.jpg);
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            overflow: hidden;
+            display: none;
+        }
+        .section3__body .album .layout4{
+            background-image: url(assets/img/mainPageImg/album3.jpg);
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            overflow: hidden;
+            display: none;
+        }
+        .section3__body .album .layout5{
+            background-image: url(assets/img/mainPageImg/album4.jpg);
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            overflow: hidden;
+            display: none;
+        }
+
+        .section3__footer {
+            margin-top: 70vh;
+            text-align: center;
+            margin-bottom: 10vh;
+        }
+        .section3__footer a {
+            font-size: 10vh;
+            color: #fff;
+            text-decoration: none;
+            /* border: 3px solid #fff; */
+            margin-top: 30vh;
+            transition: all 0.5s ease;
+            padding: 1vh 10vh;
+            border-radius: 10vh;
+        }
+
+        .section3__footer a:hover {
+            background: #fff;
+            color: #69A5A4;
+            transition: all 0.5s ease;
+            opacity: 0.8;
+        }
+        
+        
 
 
     </style>
@@ -73,15 +156,53 @@
             <p>원하는 레이아웃 스타일을 둘러보세요.</p>
         </div>
         <div class="section3__body">
-            <div class="layouts">
-                <article class="layout layout1"></article>
-                <article class="layout layout2"></article>
-                <article class="layout layout3"></article>
-                <article class="layout layout4"></article>
-                <article class="layout layout5"></article>
+            <div class="left">
+                <h4 class="active">basic</h4>
+                <h4>instagram</h4>
+                <h4>width</h4>
+                <h4>height</h4>
+                <h4>custom</h4>
+            </div>
+            <div class="right">
+                <div class="album">
+                    <article class="layout1 show"></article>
+                    <article class="layout2"></article>
+                    <article class="layout3"></article>
+                    <article class="layout4"></article>
+                    <article class="layout5"></article>
+                </div>
             </div>
         </div>
+        <div class="section3__footer">
+            <a href="#">의뢰하기</a>
+            <a href="#">문의하기</a>
+        </div>
+
     </section>
     
+    <script>
+        let layouts = document.querySelector(".section3__body");
+        let layoutMenu = layouts.querySelectorAll(".left h4");
+        let layoutMenu0 = layouts.querySelector(".left h4");
+        let layoutAlbum = layouts.querySelectorAll(".album article");
+
+        layoutMenu.forEach((el, index) => {
+            el.addEventListener("mouseenter", () => {
+                layouts.querySelectorAll(".left h4").forEach(all => {
+                all.classList.remove("active");
+                });
+                layouts.querySelectorAll(".album article").forEach(all => {
+                    all.classList.remove("show");
+                    layouts.querySelector(".album article")
+                });
+                el.classList.add("active");
+                console.log(index);
+                layouts.querySelector(".album article:nth-child(" + (index + 1) + ")").classList.add("show");
+            });
+        });
+
+        
+
+    </script>
 </body>
 </html>

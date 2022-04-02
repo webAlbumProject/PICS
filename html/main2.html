@@ -160,10 +160,9 @@
     </section>
     
     <script>
-        const drag = document.querySelector(".collection__photo"); // 드래그 대상 요소
-        const drag2 = drag.querySelector(".photos"); // 드래그 대상 요소
+        let drag = document.querySelector(".collection__photo"); // 드래그 대상 요소
+        let drag2 = drag.querySelector(".photos"); // 드래그 대상 요소
         
-
         const initialMousePos = { x : 0}; // 드래그 시작 시점의 마우스 포인터 위치
         const offset = {x : 0}; //이동할 거리
         
